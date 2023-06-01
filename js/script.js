@@ -155,7 +155,48 @@ function valorCantidadCompra(resultado) {
     
 }
 
+function validarNotas(resultado) {
+    contadorSeis ++;
 
+    let notas = [];
+    let sumaNotas = 0;
+  
+    for (let i = 1; i <= 4; i++) {
+      let nota = parseFloat(prompt(`Digite la nota ${i}: `));
+  
+      while (nota < 0 || nota > 5) {
+        nota = parseFloat(prompt(`La nota ${i} debe estar entre 0 y 5. Por favor ingrese el valor nuevamente: `));
+      }
+  
+      notas.push(nota);
+      sumaNotas += nota;
+    }
+  
+    if (notas[3] === 5) {
+      for (let i = 0; i < 3; i++) {
+        if (notas[i] <= 4) {
+          notas[i] += 1;
+          sumaNotas += 1;
+        }
+      }
+    }
+  
+    const notaFinal = (notas[0] * 0.1) + (notas[1] * 0.2) + (notas[2] * 0.3) + (notas[3] * 0.4);
+  
+    console.log("Promedio de cada nota:");
+    console.log(`Nota 1: ${(notas[0]*0.1).toFixed(2)}`);
+    console.log(`Nota 2: ${(notas[1]*0.2).toFixed(2)}`);
+    console.log(`Nota 3: ${(notas[2]*0.3).toFixed(2)}`);
+    console.log(`Nota 4: ${(notas[3]*0.4).toFixed(2)}`);
+  
+    if (notaFinal >= 3.5) {
+      resultado= console.log(`El estudiante ganó; Su nota final es: ${notaFinal.toFixed(2)}`);
+    } else {
+        resultado= console.log(`El estudiante perdió; Su nota final es: ${notaFinal.toFixed(2)}`);
+    }
+    return resultado;
+    
+  }
 
 
   
