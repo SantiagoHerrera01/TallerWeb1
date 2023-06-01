@@ -81,6 +81,48 @@ function tipoTriangulo(resultado) {
 
 
 
+function numerosAmigos(resultado) {
+    
+    contadorCuatro ++;
+    //Numero Uno
+    let numeroUno = parseInt(prompt('Digite el primer numero: '));
+    let divisoresNum1 = [1]
+    for(let i = 2; i < numeroUno; i++){
+        if (numeroUno % i == 0){
+        divisoresNum1.push(i)
+        }
+        else if(divisoresNum1.length < 2){
+            divisoresNum1.push(numeroUno)
+        }
+
+    }
+    let sumaDiv1 = divisoresNum1.reduce((a,b)=>a+b)
+    console.log(`Los divisores de ${numeroUno} son: ${divisoresNum1} y la suma es: ${sumaDiv1} `)
+        // Numero dos
+    let numeroDos = parseInt(prompt('Digite el segundo numero: '));
+    let divisoresNum2 = [1]
+    for(let i = 2; i < numeroDos; i++){
+        if (numeroDos % i == 0){   
+            divisoresNum2.push(i)
+        }else if(divisoresNum2.length < 2){
+            divisoresNum2.push(numeroUno)
+            }
+    }
+    let sumaDiv2 = divisoresNum2.reduce((a,b)=>a+b)
+    console.log(`Los divisores de ${numeroDos} son: ${divisoresNum2} y su suma es: ${sumaDiv2} `)
+    //Comprobacion
+    if(sumaDiv1 == numeroDos && sumaDiv2 == numeroUno){
+            resultado= console.log(`${numeroUno} y ${numeroDos} son números amigos`)
+        }else{
+            resultado= console.log(`${numeroUno} y ${numeroDos} no son números amigos`)
+        }
+    return resultado
+    
+}
+
+
+
+
 
 
 
