@@ -123,6 +123,38 @@ function numerosAmigos(resultado) {
 
 
 
+function valorCantidadCompra(resultado) {
+    contadorCinco++;
+
+    let valor 
+    let cantidad
+    
+
+    valor = parseInt(prompt('Digite el valor unitario: '))
+    cantidad = parseInt(prompt('Digite la cantidad'))
+
+    let totalSinIva= valor*cantidad
+    console.log(`El total sin iva es: ${ totalSinIva}`);
+
+    let iva = totalSinIva*(19/100)
+    let totalConIva=totalSinIva+iva
+    console.log(`El total con iva es: ${ totalConIva}`);
+
+    if(totalConIva>=1000000){
+        let descuento= totalConIva-totalConIva*0.1
+        resultado = console.log(`El total de su compra es: ${descuento}`);
+    }
+
+    if (totalConIva>=500000&&totalConIva<1000000){
+        resultado= console.log(`Se devuleve un total de: ${totalConIva-totalSinIva}`);
+        console.log(`El valor de su compra es de: ${totalSinIva}`);
+
+    }
+    
+    return resultado
+    
+}
+
 
 
 
