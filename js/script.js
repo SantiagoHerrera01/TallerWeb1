@@ -53,6 +53,34 @@ function areaCircunferencia(resultado,contadorDos){
     
 }
 
+function tipoTriangulo(resultado) {
+    contadorTres ++;
+    let ladoUno
+    let ladoDos
+    let ladoTres
+
+   ladoUno= Number(prompt("Digite la medida del lado uno"))
+   ladoDos= Number(prompt("Digite la medida del lado dos"))
+   ladoTres= Number(prompt("Digite la medida del lado tres"))
+
+   if(ladoUno!= ladoDos && ladoDos!=ladoTres){
+        resultado= console.log('Es un triangulo escaleno');
+   }
+
+   if(ladoUno==ladoDos && ladoDos != ladoTres){
+        resultado= console.log('Es un triangulo isóceles');
+   }
+
+   
+   if(ladoUno===ladoDos&&ladoDos===ladoTres){
+    resultado=console.log('Es un triangulo equilatero');
+   }
+   return resultado
+   
+}
+
+
+
 
 
 
