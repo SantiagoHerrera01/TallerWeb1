@@ -42,6 +42,17 @@ let numeroTres
     
 }
 
+function areaCircunferencia(resultado,contadorDos){
+    contadorDos ++;
+    let radioC
+    radioC=Number(prompt('Digite el radio de la circunferencia'))
+
+    resultado= 3.14 * radioC
+
+    return console.log(`El radio de la circunferencia es: ${ resultado}`);
+    
+}
+
 
 
 
