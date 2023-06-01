@@ -1,8 +1,14 @@
 let resultado
 let repetir = true
-
+let contadorUno = 0;
+let contadorDos = 0;
+let contadorTres = 0;
+let contadorCuatro = 0;
+let contadorCinco = 0;
+let contadorSeis = 0;
 
 function numeroMayorMenor(resultado){
+    contadorUno++;
 let numeroUno
 let numeroDos
 let numeroTres
@@ -32,18 +38,23 @@ let numeroTres
         resultado=console.log(numeroUno,numeroTres,numeroDos);
         return console.log(resultado);
     }
+    
+    
 }
 
-function areaCircunferencia(resultado){
+function areaCircunferencia(resultado,contadorDos){
+    contadorDos ++;
     let radioC
     radioC=Number(prompt('Digite el radio de la circunferencia'))
 
     resultado= 3.14 * radioC
 
     return console.log(`El radio de la circunferencia es: ${ resultado}`);
+    
 }
 
 function tipoTriangulo(resultado) {
+    contadorTres ++;
     let ladoUno
     let ladoDos
     let ladoTres
@@ -65,11 +76,14 @@ function tipoTriangulo(resultado) {
     resultado=console.log('Es un triangulo equilatero');
    }
    return resultado
+   
 }
 
 
 
 function numerosAmigos(resultado) {
+    
+    contadorCuatro ++;
     //Numero Uno
     let numeroUno = parseInt(prompt('Digite el primer numero: '));
     let divisoresNum1 = [1]
@@ -103,12 +117,15 @@ function numerosAmigos(resultado) {
             resultado= console.log(`${numeroUno} y ${numeroDos} no son números amigos`)
         }
     return resultado
+    
 }
 
 
 
 
 function valorCantidadCompra(resultado) {
+    contadorCinco++;
+
     let valor 
     let cantidad
     
@@ -135,9 +152,12 @@ function valorCantidadCompra(resultado) {
     }
     
     return resultado
+    
 }
 
-function validarNotas() {
+function validarNotas(resultado) {
+    contadorSeis ++;
+
     let notas = [];
     let sumaNotas = 0;
   
@@ -175,7 +195,10 @@ function validarNotas() {
         resultado= console.log(`El estudiante perdió; Su nota final es: ${notaFinal.toFixed(2)}`);
     }
     return resultado;
+    
   }
+
+
   
   
 
@@ -215,3 +238,9 @@ switch(menu){
         break
 }
 }
+console.log(`El ejercicio 1 se ejecutó ${contadorUno} veces`);
+console.log(`El ejercicio 2 se ejecutó ${contadorDos} veces`);
+console.log(`El ejercicio 3 se ejecutó ${contadorTres} veces`);
+console.log(`El ejercicio 4 se ejecutó ${contadorCuatro} veces`);
+console.log(`El ejercicio 5 se ejecutó ${contadorCinco} veces`);
+console.log(`El ejercicio 6 se ejecutó ${contadorSeis} veces`);
